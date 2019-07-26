@@ -26,7 +26,7 @@ data <- data[,-14]
 names(data) <- c("Padanie_miednicy", "Pochylenie_miednicy", "Lordoza_lędźwiowa", "Nachylenie_kości_krzyżowej", "Kąt_ułożenia_miednicy", "Stopień_zwyrodnienia", "Zbocze_miednicy", "Kierunkowe_pochylenie", "Nachylenie_piersiowego", "Pochylenie_szyjnego", "Kąt_kości_krzyżowej", "Nachylenie_boczne", "Ocena")
 # Zamiana abnormal/normal na 0-normal 1-abnormal
 for ( i in 1:nrow(data) ) {
-  if (data["Ocena"][i,] == "Abnormal") data["Ocena"][i,] <- as.numeric(1)
+  if (data["Ocena"][i,] == "Abnaormal") data["Ocena"][i,] <- as.numeric(1)
   else if (data["Ocena"][i,] == "Normal") data["Ocena"][i,] <- as.numeric(0)
 }
 
